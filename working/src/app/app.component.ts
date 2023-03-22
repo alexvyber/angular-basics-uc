@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core"
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<div class="app">Hello Angular!</div>
-    <h1>{{ message.length ? message : 'zalupa' }}</h1>
+    <h1>{{ message.length ? message : "zalupa" }}</h1>
     <h1>{{ newMessage }}</h1>
     <!-- <h1 [innerText]="math.random() > 0.5 ? 'asdfasdf' : 'qwerqwer'"></h1> -->
     <!-- <h1 [innerText]="(() => { return "asdfasdf"})()"></h1> -->
@@ -16,10 +16,9 @@ import { Component, OnInit } from '@angular/core';
       (input)="newMessage = messageInput.value"
       #messageInput
       #messageInput2
-      #messageInput3
-    />
+      #messageInput3 />
     <p>{{ messageInput2.value }}</p>
-    <p>{{ messageInput3.value + '~~' }}</p>
+    <p>{{ messageInput3.value + "~~" }}</p>
     <button (click)="handleClick()">asdfasdf</button>
     <!-- <h1>
       {{ math.random() > 0.5 ? 'asdfasdf' : 'qwerqwer' }}
@@ -36,27 +35,27 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class AppComponent implements OnInit {
-  message!: string;
+  message!: string
 
-  newMessage: string = '';
+  newMessage: string = ""
 
-  math = Math;
+  math = Math
 
   constructor() {}
 
   ngOnInit() {
-    this.message = 'aaaaaaaaaaa';
-    console.log('Hello World!');
+    this.message = "aaaaaaaaaaa"
+    console.log("Hello World!")
   }
 
   handleClick() {
-    console.log('click');
+    console.log("click")
   }
 
   hadleInput(event: Event) {
-    const { value } = event.target as HTMLInputElement;
-    this.newMessage = value;
-    console.log('🚀 ~ AppComponent ~ hadleInput ~ value:', value);
+    const { value } = event.target as HTMLInputElement
+    this.newMessage = value
+    console.log("🚀 ~ AppComponent ~ hadleInput ~ value:", value)
   }
 }
 
